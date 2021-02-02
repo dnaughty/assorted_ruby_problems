@@ -1,0 +1,20 @@
+# begin
+# Given an array of n distinct integers sorted in ascending order, find a fixed point in the array.
+# Fixed Point in an array is an index i such that arr[i] is equal to i, i.e. a[i]==i
+# Time-complexity: O(logn)
+# Space-complexity: O(1)
+# Algorithm: Binary Search
+# end
+
+def fixed_point(arr)
+
+	arr.each do |idx|
+		return [idx, arr[idx]] if idx == arr[idx]
+	end
+
+	false
+end
+
+p fixed_point([1,2,3,4,4,5,67,22])
+
+p fixed_point([1,2,3,4,5])
