@@ -8,9 +8,7 @@
 
 def fixed_point(arr)
 
-	arr.each do |idx|
-		return [idx, arr[idx]] if idx == arr[idx]
-	end
+	arr.each { |idx| return [idx, arr[idx]] if idx == arr[idx] }
 
 	false
 end
